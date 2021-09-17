@@ -12105,10 +12105,9 @@ pbkdf2@^3.0.17, pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-penguinfinance-uikit2@^1.0.24:
+"penguinfinance-uikit2@https://github.com/arcticfox-finance/alpha-uikit":
   version "1.0.24"
-  resolved "https://registry.yarnpkg.com/penguinfinance-uikit2/-/penguinfinance-uikit2-1.0.24.tgz#8faaa279d5fdff6ff9a539130a2a88b10073da4e"
-  integrity sha512-ub0Fu84NEiybx8Ages7yLhXIKcOOVnnh8HlJcwnaV7xg/r1+F1IuUrmMhSqOwWZppTcg82lJ8tdCTVhmAQ6Esw==
+  resolved "https://github.com/arcticfox-finance/alpha-uikit#bcb88a91d37c646d5907c93493acf7d54b3bac26"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

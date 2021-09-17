@@ -12107,7 +12107,7 @@ pbkdf2@^3.0.17, pbkdf2@^3.0.3:
 
 "penguinfinance-uikit2@https://github.com/arcticfox-finance/alpha-uikit":
   version "1.0.24"
-  resolved "https://github.com/arcticfox-finance/alpha-uikit#bcb88a91d37c646d5907c93493acf7d54b3bac26"
+  resolved "https://github.com/arcticfox-finance/alpha-uikit#7e819730eb39cfa76547fe28de049525316baf47"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

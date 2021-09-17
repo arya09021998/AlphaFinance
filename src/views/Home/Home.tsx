@@ -220,10 +220,10 @@ const Home: React.FC = () => {
         <Hero>
           <HeroBgImageContainer>
             <HeroBgImage src={`${process.env.PUBLIC_URL}/images/home/HomeBanner1.png`} alt="astronaut" />
-            <HeroLeftImage src={`${process.env.PUBLIC_URL}/images/home/PenguinAstronaut.gif`} alt="astronaut" />
-            <HeroRightImage src={`${process.env.PUBLIC_URL}/images/home/Astronaut2.gif`} alt="astronaut" />
+            {/* <HeroLeftImage src={`${process.env.PUBLIC_URL}/images/home/PenguinAstronaut.gif`} alt="astronaut" />
+            <HeroRightImage src={`${process.env.PUBLIC_URL}/images/home/Astronaut2.gif`} alt="astronaut" /> */}
           </HeroBgImageContainer>
-          <Header color="primary">{TranslateString(576, 'Penguin Finance')}</Header>
+          <Header color="primary">{TranslateString(576, 'Alpha Finance')}</Header>
           <Text>{TranslateString(578, 'The #1 project on Avalanche')}</Text>
         </Hero>
         <HomeBgContainer />

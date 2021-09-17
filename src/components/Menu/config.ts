@@ -7,14 +7,14 @@ export const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'Buy $PEFI',
+    label: 'Buy $ALPHA',
     icon: 'TradeIcon',
     href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0xe896CDeaAC9615145c0cA09C8Cd5C25bced6384c',
   },
   {
-    label: 'Igloos',
+    label: 'Farms',
     icon: 'IglooIcon',
-    href: '/igloos',
+    href: '/farms',
   },
   {
     label: 'Compounder',
@@ -22,40 +22,40 @@ export const config: MenuEntry[] = [
     href: '/compounder',
   },
   {
-    label: 'Nests',
+    label: "Wolf's Den",
     icon: 'NestIcon',
-    href: '/nests',
+    href: '/den',
   },
   {
-    label: 'Emperor',
+    label: 'Yield Strategies',
     icon: 'CrownIcon',
-    href: '/emperor',
+    href: '/strategies',
   },
   {
-    label: 'Arena',
+    label: 'NFT Yield',
     icon: 'BattleIcon',
-    href: '/arena',
+    href: '/nftyield',
   },
   {
-    label: 'Launchpad',
-    icon: 'LaunchpadIcon',
-    href: '/launchpad',
+    label: 'Hall of fame (NFTs)',
+    icon: 'CrownIcon',
+    href: '/hall',
   },
-  {
-    label: 'Club Penguin',
-    icon: 'BattleIcon',
-    href: '/club',
-  },
+  // {
+  //   label: 'Club Penguin',
+  //   icon: 'BattleIcon',
+  //   href: '/club',
+  // },
   // {
   //   label: 'Penguin lottery',
   //   icon: 'NftIcon',
   //   href: '/lottery',
   // },
-  {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: '/collectibles',
-  },
+  // {
+  //   label: 'Collectibles',
+  //   icon: 'NftIcon',
+  //   href: '/collectibles',
+  // },
   // {
   //   label: 'Penguin teams',
   //   icon: 'NftIcon',
@@ -79,27 +79,27 @@ export const config: MenuEntry[] = [
       },
     ],
   },
-  {
-    label: 'Audited by CertiK',
-    icon: 'AuditIcon',
-    href: 'https://www.certik.org/projects/penguinfinance',
-  },
+  // {
+  //   label: 'Audited by CertiK',
+  //   icon: 'AuditIcon',
+  //   href: 'https://www.certik.org/projects/penguinfinance',
+  // },
 ]
 
 export const socials = [
   {
     label: 'Discord',
     icon: 'DiscordIcon',
-    href: 'https://discord.gg/R5Rv68GXXc',
+    href: '/socials'// 'https://discord.gg/',
   },
   {
     label: 'Telegram',
     icon: 'TelegramIcon',
-    href: 'https://t.me/penguin_defi',
+    href: '/socials'// 'https://t.me/',
   },
   {
     label: 'Twitter',
     icon: 'TwitterIcon',
-    href: 'https://twitter.com/penguin_defi',
+    href: 'https://twitter.com/avax_alphafi',
   },
 ]

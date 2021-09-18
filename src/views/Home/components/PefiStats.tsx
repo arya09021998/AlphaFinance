@@ -26,7 +26,7 @@ import CardValue from './CardValue'
 const StyledPefiStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  background: ${({ theme }) => theme.isDark && '#30264F'};
+  background: ${({ theme }) => theme.isDark && '#4D516D88'};
 `
 
 const Row = styled.div`

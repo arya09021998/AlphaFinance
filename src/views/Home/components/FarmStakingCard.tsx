@@ -11,7 +11,7 @@ import PefiWalletBalance from './PefiWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 376px;
-  background: ${({ theme }) => theme.isDark && '#30264F'};
+  background: ${({ theme }) => theme.isDark && '#4D516D88'};
 `
 
 const Block = styled.div`

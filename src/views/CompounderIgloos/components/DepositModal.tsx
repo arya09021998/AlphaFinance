@@ -58,7 +58,7 @@ const StakeInfoWrapper = styled(Flex)`
 `
 const StyledButton = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? '#ffffff' : '#d2474e')};
-  color: ${({ theme }) => (theme.isDark ? '#30264f' : '#ffffff')};
+  color: ${({ theme }) => (theme.isDark ? '#4D516D88' : '#ffffff')};
   font-weight: 400;
   border-bottom: ${({ theme }) => (theme.isDark ? '3px solid #614284' : '3px solid #b73e4a')};
 `

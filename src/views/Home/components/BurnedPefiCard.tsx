@@ -13,7 +13,7 @@ const StyledFarmStakingCard = styled(Card)`
   position: relative;
   width: 100%;
   background: #363266;
-  background: ${({ theme }) => theme.isDark && '#30264F'};
+  background: ${({ theme }) => theme.isDark && '#4D516D88'};
 
   ${({ theme }) => theme.mediaQueries.lg} {
     margin: 0;

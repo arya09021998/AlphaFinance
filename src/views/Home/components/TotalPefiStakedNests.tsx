@@ -12,7 +12,7 @@ const StyledTotalValueLockedCard = styled(Card)`
   display: flex;
   flex: 1;
   background: #363266;
-  background: ${({ theme }) => theme.isDark && '#30264F'};
+  background: ${({ theme }) => theme.isDark && '#4D516D88'};
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;

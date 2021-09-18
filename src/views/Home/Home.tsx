@@ -163,7 +163,8 @@ const SpacingWrapper = styled.div`
 `
 
 const HomeBgContainer = styled.div`
-  background-image: url('/images/home/bg_light.png');
+  background-image: ${({ theme }) => (theme.isDark ? "url('/images/home/bg_dark.png')" : "url('/images/home/bg_light.png')")};
+  url('/images/home/bg_light.png')
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

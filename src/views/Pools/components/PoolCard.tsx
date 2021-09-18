@@ -134,7 +134,7 @@ const PoolCard: React.FC<Props> = ({ pool }) => {
           </InfoIconWrapper>
         </Flex>
         <Flex mt="12px" mb="32px">
-          <CardImage src="/images/pools/iPefi.svg" alt="iPefi logo" width={64} height={64} />
+          <CardImage src="/images/Awolf.png" alt="iPefi logo" width={64} height={64} />
           <Content>
             <Flex mb="24px">
               <Block>

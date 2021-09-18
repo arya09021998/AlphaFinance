@@ -151,7 +151,7 @@ const Cards = styled(BaseLayout)`
 const PoolCardWrapper = styled.div`
   > div {
     > div {
-      background: ${({ theme }) => theme.isDark && '#30264F'};
+      background: ${({ theme }) => theme.isDark && '#4D516D88'};
     }
   }
 `

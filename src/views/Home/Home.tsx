@@ -233,7 +233,6 @@ const Home: React.FC = () => {
             <SpacingWrapper />
             <FarmStakingCard />
             <SpacingWrapper />
-            <SpacingWrapper />
             {pefiPool && (
               <PoolCardWrapper>
                 <PoolCard pool={pefiPool} isMainPool={false} isHomePage />

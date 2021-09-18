@@ -179,22 +179,10 @@ const PefiStats: React.FC<HarvestProps> = ({ pool }) => {
         </Row>
         <Row>
           <Text color="primary" fontSize="14px">
-            {TranslateString(540, 'XPEFI to PEFI ratio:')}
-          </Text>
-          <CardValue fontSize="14px" decimals={3} value={xPefiToPefiRatio} />
-        </Row>
-        <Row>
-          <Text color="primary" fontSize="14px">
             {TranslateString(540, 'PEFI Emission Rate:')}
           </Text>
           <CardValue fontSize="14px" decimals={2} suffix=" PEFI/block" value={pefiPerBlock.toNumber()} />
         </Row>
-        {/* <Row>
-          <Text color="primary" fontSize="14px">
-            {TranslateString(540, 'Paper Hands Penalty:')}
-          </Text>
-          <CardValue fontSize="14px" decimals={2} suffix=" %" value={Number(handsOnPenalty)} />
-        </Row> */}
         <Row>
           <Text color="primary" fontSize="14px">
             {TranslateString(538, 'Max PEFI Supply:')}

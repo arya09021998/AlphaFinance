@@ -31,8 +31,7 @@ const StyledHeading = styled(Heading)`
 // background: ${(props) => props.theme.card.background};
 const CardContent = styled.div`
   padding: 24px;
-  background: #363266;
-  background: ${({ theme }) => theme.isDark && '#4D516D88'};
+
   border-radius: 32px;
 `
 
@@ -147,7 +146,7 @@ const PoolCard: React.FC<Props> = ({ pool }) => {
               <Block>
                 <Label>{TranslateString(546, `Yesterday's APY: `)}</Label>
                 <Text color="textSubtle" bold fontSize="24px">
-                  {`${getNumberWithCommas(displayedNestApy)}%`}
+                  {`${getNumberWithCommas(100/* displayedNestApy */)}%`}
                 </Text>
               </Block>
             </Flex>

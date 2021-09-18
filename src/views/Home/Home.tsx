@@ -163,7 +163,7 @@ const SpacingWrapper = styled.div`
 `
 
 const HomeBgContainer = styled.div`
-  background-image: url('/images/home/HomePageBackground.png');
+  background-image: url('/images/home/bg_light.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -229,21 +229,25 @@ const Home: React.FC = () => {
         <HomeBgContainer />
         <div>
           <Cards>
+          <PefiStatsCardWrapper>
+            <SpacingWrapper />
             <FarmStakingCard />
-            <PefiStatsCardWrapper>
-              <BurnedPefiCard />
-              <SpacingWrapper />
-              <PercentagePefiStakedNests pool={pefiPool} />
-              <SpacingWrapper />
-              <TotalPefiStakedNests pool={pefiPool} />
-            </PefiStatsCardWrapper>
+            <SpacingWrapper />
+            <SpacingWrapper />
             {pefiPool && (
               <PoolCardWrapper>
                 <PoolCard pool={pefiPool} isMainPool={false} isHomePage />
               </PoolCardWrapper>
             )}
-            <PefiStats pool={pefiPool} />
-            <SpacingWrapper />
+            </PefiStatsCardWrapper>
+            <PefiStatsCardWrapper>
+              <BurnedPefiCard />
+              <SpacingWrapper />
+              <PercentagePefiStakedNests pool={pefiPool} />
+              <SpacingWrapper />
+              {/* <TotalPefiStakedNests pool={pefiPool} /> */}
+              <PefiStats pool={pefiPool} />
+            </PefiStatsCardWrapper>
           </Cards>
         </div>
       </Page>

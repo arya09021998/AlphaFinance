@@ -26,7 +26,7 @@ import CardValue from './CardValue'
 const StyledPefiStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  background: ${({ theme }) => theme.isDark && '#4D516D88'};
+  background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
 `
 
 const Row = styled.div`
@@ -189,12 +189,12 @@ const PefiStats: React.FC<HarvestProps> = ({ pool }) => {
           </Text>
           <CardValue fontSize="14px" decimals={2} suffix=" PEFI/block" value={pefiPerBlock.toNumber()} />
         </Row>
-        <Row>
+        {/* <Row>
           <Text color="primary" fontSize="14px">
             {TranslateString(540, 'Paper Hands Penalty:')}
           </Text>
           <CardValue fontSize="14px" decimals={2} suffix=" %" value={Number(handsOnPenalty)} />
-        </Row>
+        </Row> */}
         <Row>
           <Text color="primary" fontSize="14px">
             {TranslateString(538, 'Max PEFI Supply:')}

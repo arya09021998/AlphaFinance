@@ -164,7 +164,6 @@ const SpacingWrapper = styled.div`
 
 const HomeBgContainer = styled.div`
   background-image: ${({ theme }) => (theme.isDark ? "url('/images/home/bg_dark.png')" : "url('/images/home/bg_light.png')")};
-  url('/images/home/bg_light.png')
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
@@ -227,7 +226,7 @@ const Home: React.FC = () => {
           <Header color="primary">{TranslateString(576, 'Alpha Finance')}</Header>
           <Text>{TranslateString(578, 'The #1 project on Avalanche')}</Text>
         </Hero>
-        <HomeBgContainer />
+        {/* <HomeBgContainer /> */}
         <div>
           <Cards>
           <PefiStatsCardWrapper>

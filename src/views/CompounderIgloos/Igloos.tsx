@@ -224,10 +224,10 @@ const Igloos: React.FC = () => {
         <IgloosBgContainer />
       </BgWrapper>
       <IgloosBannerContainer>
-        <BannerImage
+        {/* <BannerImage
           src={`${process.env.PUBLIC_URL}/images/compounder-igloos/Compounder${isDark ? 'Night' : 'Day'}.gif`}
           alt="compounder igloos banner"
-        />
+        /> */}
       </IgloosBannerContainer>
       <CompounderContent>
         <FilterContainer>
@@ -322,7 +322,7 @@ const IgloosBgContainer = styled.div`
 `
 
 const BgWrapper = styled.div`
-  background: ${({ theme }) => (theme.isDark ? '#1A1028' : '#F9F8F9')};
+  //background: ${({ theme }) => (theme.isDark ? '#1A1028' : '#F9F8F9')};
   position: absolute;
   top: 0px;
   bottom: 0px;

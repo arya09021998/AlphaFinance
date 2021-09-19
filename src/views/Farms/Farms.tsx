@@ -105,7 +105,8 @@ const Farms: React.FC = () => {
         <IgloosBgContainer />
       </BgWrapper>
       <IgloosBannerContainer>
-        <BannerImage src={`${process.env.PUBLIC_URL}/images/farms/IglooHeader.gif`} alt="igloos banner" />
+        {/* <BannerImage src={`${process.env.PUBLIC_URL}/images/farms/IglooHeader.gif`} alt="igloos banner" /> */}
+        <Divider />
       </IgloosBannerContainer>
       {/* <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} /> */}
       <IgloosContentContainer>
@@ -147,7 +148,7 @@ const IgloosBgContainer = styled.div`
 `
 
 const BgWrapper = styled.div`
-  background: ${({ theme }) => !theme.isDark && '#EBEEF7'};
+  //background: ${({ theme }) => !theme.isDark && '#EBEEF7'};
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -166,6 +167,14 @@ const IgloosBannerContainer = styled.div`
 `
 const BannerImage = styled.img`
   z-index: -1;
+`
+
+const Divider = styled.div`
+  background-color: ${({ theme }) => theme.colors.borderColor};
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 `
 
 // content

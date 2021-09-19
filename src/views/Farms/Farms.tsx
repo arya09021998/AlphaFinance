@@ -3,6 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
+import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { SECONDS_PER_YEAR, WEEKS_PER_YEAR, PEFI_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
@@ -12,10 +13,13 @@ import useRefresh from 'hooks/useRefresh'
 import useBlockGenerationTime from 'hooks/useBlockGenerationTime'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
+import { Text, BaseLayout } from 'penguinfinance-uikit2'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
+
 
 //
 const Farms: React.FC = () => {
+  const TranslateString = useI18n()
   const { path } = useRouteMatch()
   const pefiPerBlock = usePefiPerBlock()
   const farmsLP = useFarms()
@@ -104,14 +108,14 @@ const Farms: React.FC = () => {
       <BgWrapper>
         <IgloosBgContainer />
       </BgWrapper>
-      <IgloosBannerContainer>
+      <Hero>
+        <Header>{TranslateString(57600, 'Farms')}</Header>
+        <Text>{TranslateString(578, 'Stake tokens and LP pairs to earn $WOLF')}</Text>
         {/* <BannerImage src={`${process.env.PUBLIC_URL}/images/farms/IglooHeader.gif`} alt="igloos banner" /> */}
-        <Divider />
-      </IgloosBannerContainer>
+      </Hero>
+      <Divider />
       {/* <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} /> */}
       <IgloosContentContainer>
-        {/* <Divider /> */}
-
         <FlexLayout>
           <Route exact path={`${path}`}>
             {/* {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)} */}
@@ -131,6 +135,52 @@ const Farms: React.FC = () => {
 
 const FarmPage = styled(Page)`
   max-width: 1200px;
+`
+
+const Hero = styled.div`
+  position: relative;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  text-align: center;
+  height: 165px;
+  background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 44px;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  > div {
+    color: ${({ theme }) => (theme.isDark ? 'white' : 'black')};
+    z-index: 1;
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    background-position: center center;
+    height: 165px;
+  }
+`
+
+const Header = styled(Text)`
+  @font-face {
+    font-family: 'GothamBold Font';
+    src: url(${process.env.PUBLIC_URL}/fonts/GothamBold.ttf) format('truetype');
+  }
+
+  font-family: 'GothamBold Font';
+  font-size: 32px;
+  margin-top: -16px;
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 44px;
+  }
 `
 
 // bg
@@ -172,8 +222,7 @@ const BannerImage = styled.img`
 const Divider = styled.div`
   background-color: ${({ theme }) => theme.colors.borderColor};
   height: 1px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 32px;
   width: 90%;
 `
 

@@ -42,7 +42,7 @@ const Hero = styled.div`
     z-index: 1;
   }
   > div {
-    color: white;
+    color: ${({ theme }) => (theme.isDark ? 'white' : 'black')};
     z-index: 1;
   }
 
@@ -167,7 +167,7 @@ const HomeBgContainer = styled.div`
   url('/images/home/bg_light.png')
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: bottom right;
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -220,8 +220,8 @@ const Home: React.FC = () => {
       <Page>
         <Hero>
           <HeroBgImageContainer>
-            <HeroBgImage src={`${process.env.PUBLIC_URL}/images/home/HomeBanner1.png`} alt="astronaut" />
-            {/* <HeroLeftImage src={`${process.env.PUBLIC_URL}/images/home/PenguinAstronaut.gif`} alt="astronaut" />
+            {/* <HeroBgImage src={`${process.env.PUBLIC_URL}/images/home/HomeBanner1.png`} alt="astronaut" />
+            <HeroLeftImage src={`${process.env.PUBLIC_URL}/images/home/PenguinAstronaut.gif`} alt="astronaut" />
             <HeroRightImage src={`${process.env.PUBLIC_URL}/images/home/Astronaut2.gif`} alt="astronaut" /> */}
           </HeroBgImageContainer>
           <Header color="primary">{TranslateString(576, 'Alpha Finance')}</Header>

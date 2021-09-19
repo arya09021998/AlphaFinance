@@ -213,7 +213,7 @@ const InfoIconWrapper = styled.div`
 
 const StyledButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
+  color: red;
   width: 48%;
   white-space: nowrap;
 `

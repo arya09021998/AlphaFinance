@@ -24,6 +24,7 @@ import { PEFI_MAX_SUPPLY } from 'config'
 import CardValue from './CardValue'
 
 const StyledPefiStats = styled(Card)`
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
   margin-left: auto;
   margin-right: auto;
   background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};

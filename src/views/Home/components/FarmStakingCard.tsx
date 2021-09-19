@@ -10,6 +10,7 @@ import PefiHarvestBalance from './PefiHarvestBalance'
 import PefiWalletBalance from './PefiWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
   height: 230px;
   background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
 `

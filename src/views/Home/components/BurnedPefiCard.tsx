@@ -7,6 +7,7 @@ import { getPefiAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 
 const StyledFarmStakingCard = styled(Card)`
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
   min-height: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -22,11 +23,11 @@ const StyledFarmStakingCard = styled(Card)`
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors[theme.isDark ? 'white' : 'black']};
 `
 
 const Text = styled(Heading)`
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors[theme.isDark ? 'white' : 'black']};
 `
 
 const BurnedPefiCard = () => {

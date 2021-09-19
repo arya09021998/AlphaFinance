@@ -8,6 +8,7 @@ import useI18n from 'hooks/useI18n'
 import { Pool } from 'state/types'
 
 const StyledTotalValueLockedCard = styled(Card)`
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
   align-items: center;
   display: flex;
   flex: 1;
@@ -16,11 +17,11 @@ const StyledTotalValueLockedCard = styled(Card)`
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors[theme.isDark ? 'white' : 'black']};
 `
 
 const Title = styled(Heading)`
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors[theme.isDark ? 'white' : 'black']};
 `
 interface PoolWithApy extends Pool {
   apy: BigNumber
@@ -42,7 +43,7 @@ const PercentagePefiStakedNests: React.FC<HarvestProps> = ({ pool }) => {
       <StyledTotalValueLockedCard>
         <CardBody>
           <Title size="md">{TranslateString(762, 'A total of')}</Title>
-          <CardMidContent color="primary">
+          <CardMidContent>
             {parseInt(percentageStaked.toString()) ? (
               `${parseInt(percentageStaked.toString())}% ${TranslateString(736, 'of PEFI')}`
             ) : (

@@ -38,9 +38,9 @@ export interface FarmWithStakedValue extends Farm {
 
 const getCardBackground = (index, theme) => {
   if (index % 2) {
-    return theme.isDark ? '#22214C' : '#D3464E'
+    return theme.isDark ? theme.colors.darkCard : theme.colors.lightCard
   }
-  return theme.isDark ? '#322C59' : '#383466'
+  return theme.isDark ? theme.colors.darkCard : `${ theme.colors.secondary}88`
 }
 
 const FCard = styled.div<{ index: number }>`
@@ -462,7 +462,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ index, farm, account }) => {
 
     return `
       <h3 style="margin-bottom: 5px;">Your TVL</h3>
-      <p style="margin-bottom: 16px;">${stakedValueFormatted}</p>    
+      <p style="margin-bottom: 16px;">${stakedValueFormatted}</p>
       <h3 style="margin-bottom: 5px;">Underlying Assets</h3>
       <p style="margin-bottom: 5px;">${userQuoteTokenBalanceInLp.toLocaleString(undefined, {
         maximumFractionDigits: 2,
@@ -501,7 +501,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ index, farm, account }) => {
                 ? `${farm.lpSymbol.split(' ')[0]} lgloo`
                 : `${farm.type} ${farm.lpSymbol.split(' ')[0]}`}
             </Text>
-            <NoFeesTag variant="primary" index={index} outline>
+            <NoFeesTag variant="secondary" index={index} outline>
               0% REWARD FEES
             </NoFeesTag>
           </IglooTitleWrapper>

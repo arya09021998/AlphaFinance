@@ -5,8 +5,8 @@ import useAuth from 'hooks/useAuth'
 import useI18n from 'hooks/useI18n'
 
 const StyledUnlockedButton = styled(Button)`
-  background: ${({ theme }) => theme.isDark && '#D4444C'};
-  color: ${({ theme }) => theme.isDark && '#ffffff'};
+  background: ${({ theme }) => theme.isDark && 'primaryBright'};
+  color: ${({ theme }) => theme.isDark && 'black'};
 `
 
 const UnlockButton = (props) => {

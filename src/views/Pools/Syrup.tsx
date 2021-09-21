@@ -99,8 +99,7 @@ const Farm: React.FC = () => {
 }
 
 const NestBgContainer = styled.div`
-  background-image: ${({ theme }) =>
-    theme.isDark ? 'url(/images/pools/NestBackgroundNight.png)' : 'url(/images/pools/NestBackgroundLight.png)'};
+  background-image: ${({ theme }) => theme.isDark ? 'url(/images/pools/NestBackgroundNight.png)' : 'url(/images/pools/NestBackgroundLight.png)'};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

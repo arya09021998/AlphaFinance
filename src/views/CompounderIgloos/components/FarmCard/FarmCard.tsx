@@ -38,9 +38,23 @@ export interface FarmWithStakedValue extends Farm {
 
 const getCardBackground = (index, theme) => {
   if (index % 2) {
-    return theme.isDark ? theme.colors.darkCard : theme.colors.lightCard
+    return theme.isDark ? theme.colors.darkCard : theme.colors.darkCard
   }
   return theme.isDark ? theme.colors.darkCard : `${ theme.colors.secondary}88`
+}
+
+const getMainColor = (index, theme) => {
+  if (index % 2) {
+    return theme.colors[theme.isDark ? 'secondary' : 'secondary']
+  }
+  return theme.colors[theme.isDark ? 'primary' : 'primary']
+}
+
+const getSecondaryColor = (index, theme) => {
+  if (index % 2) {
+    return theme.isDark ? 'red' : 'red'
+  }
+  return theme.isDark ? 'red' : 'red'
 }
 
 const FCard = styled.div<{ index: number }>`
@@ -48,6 +62,7 @@ const FCard = styled.div<{ index: number }>`
   background: ${({ index, theme }) => getCardBackground(index, theme)};
   border-radius: 12px;
   box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 2px 8px 0px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px 12px;
@@ -121,15 +136,15 @@ const IglooTitleWrapper = styled.div`
 
 const getButtonBackground = (index, theme) => {
   if (index % 2) {
-    return theme.isDark ? '#322C59' : '#383466'
+    return theme.isDark ? theme.colors.secondary : theme.colors.secondary
   }
-  return theme.isDark ? '#22234C' : '#D3464E'
+  return theme.isDark ? 'primary' : 'primary'
 }
 
 const ActionButtonWrapper = styled.div<{ index: number }>`
   margin-right: 10px;
   button {
-    background: ${({ index, theme }) => getButtonBackground(index, theme)};
+    background: ${({ index, theme }) => getMainColor(index, theme)};
     color: ${({ theme }) => theme.isDark && '#ffffff'};
     font-family: 'Kanit';
     font-size: 14px;
@@ -156,13 +171,14 @@ const CardInfoContainer = styled.div<{ index?: number }>`
     margin-bottom: 0;
   }
 
-  &:last-child {
+  :last-child {
     > div {
       > div:last-child {
         color: ${({ index }) => (index % 2 === 0 ? '#D84E49' : '#ffffff')};
       }
     }
   }
+
 `
 const CardInfoWrapper = styled.div<{ index?: number }>`
   > div {
@@ -187,7 +203,7 @@ const CardInfoWrapper = styled.div<{ index?: number }>`
 `
 
 const PGUnlockButton = styled(UnlockButton)<{ index: number }>`
-  background: ${({ index, theme }) => getButtonBackground(index, theme)};
+  background: ${({ index, theme }) => getMainColor(index, theme)};
   color: ${({ theme }) => theme.isDark && '#ffffff'};
 `
 
@@ -218,12 +234,12 @@ const getNoFeesTagColor = (index, theme) => {
 }
 
 const NoFeesTag = styled(Tag)<{ index?: number }>`
-  color: ${({ theme }) => (theme.isDark ? '#a893ca!important' : '#ffffff!important')};
-  border-color: ${({ index, theme }) => (theme.isDark ? '#ffffff!important' : getNoFeesTagColor(index, theme))};
+  border-color: ${({ index, theme }) => (theme.isDark ? '#ffffff!important' : getMainColor(index, theme))};
   font-family: 'Poppins' !important;
   font-size: 14px !important;
   font-weight: 600;
   line-height: 1;
+
 `
 
 const getToolTipBackground = (index, theme) => {
@@ -501,8 +517,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ index, farm, account }) => {
                 ? `${farm.lpSymbol.split(' ')[0]} lgloo`
                 : `${farm.type} ${farm.lpSymbol.split(' ')[0]}`}
             </Text>
-            <NoFeesTag variant="secondary" index={index} outline>
-              0% REWARD FEES
+            <NoFeesTag variant="primary" index={index} outline>
+              4% FEE ON REWARDS
             </NoFeesTag>
           </IglooTitleWrapper>
           <Flex justifyContent="flex-start" flexWrap="wrap">

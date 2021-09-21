@@ -18,7 +18,7 @@ const PefiWalletBalance = () => {
 
   if (!account) {
     return (
-      <Text color="textDisabled" style={{ lineHeight: '54px' }}>
+      <Text color="textDisabled" style={{ lineHeight: '32px' }}>
         {TranslateString(298, 'Locked')}
       </Text>
     )
@@ -26,7 +26,7 @@ const PefiWalletBalance = () => {
 
   return (
     <>
-      <CardValue value={getBalanceNumber(pefiBalance)} decimals={4} fontSize="24px" lineHeight="36px" />
+      <CardValue value={getBalanceNumber(pefiBalance)}  decimals={2} fontSize="32px" lineHeight="1.2" />
       <CardBusdValue value={usdtBalance} />
     </>
   )

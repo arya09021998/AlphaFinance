@@ -150,6 +150,8 @@ const Hero = styled.div`
   text-align: center;
   height: 165px;
   background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
+  border-radius: 32px;
 
   h1 {
     color: white;
@@ -165,7 +167,7 @@ const Hero = styled.div`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     background-position: center center;
-    height: 165px;
+    height: 120px;
   }
 `
 

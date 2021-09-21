@@ -24,6 +24,7 @@ import {
   useCompounderFarms,
 } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
+import useI18n from 'hooks/useI18n'
 import { fetchCompounderFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
 import Select from 'components/Select/Select'
@@ -34,6 +35,7 @@ const PROJECTS = ['All', 'Your Farms', 'Penguin Finance', 'Pangolin', 'Gondola',
 
 //
 const Igloos: React.FC = () => {
+  const TranslateString = useI18n()
   const { path } = useRouteMatch()
   const pefiPerBlock = usePefiPerBlock()
   const gondolaPerSec = useGondolaPerSec()
@@ -228,6 +230,10 @@ const Igloos: React.FC = () => {
           src={`${process.env.PUBLIC_URL}/images/compounder-igloos/Compounder${isDark ? 'Night' : 'Day'}.gif`}
           alt="compounder igloos banner"
         /> */}
+        <Hero>
+          <Header>{TranslateString(57600, 'Auto-Compounders')}</Header>
+          <Text>{TranslateString(580, 'Deposit your LP tokens to autocompound your rewards')}</Text>
+        </Hero>
       </IgloosBannerContainer>
       <CompounderContent>
         <FilterContainer>
@@ -305,6 +311,54 @@ const Igloos: React.FC = () => {
 
 const CompounderIglooPage = styled(Page)`
   max-width: 1200px;
+`
+
+const Hero = styled.div`
+  position: relative;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  text-align: center;
+  height: 165px;
+  background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
+  border-radius: 32px;
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 44px;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  > div {
+    color: ${({ theme }) => (theme.isDark ? 'white' : 'black')};
+    z-index: 1;
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    background-position: center center;
+    height: 120px;
+  }
+`
+
+const Header = styled(Text)`
+  @font-face {
+    font-family: 'GothamBold Font';
+    src: url(${process.env.PUBLIC_URL}/fonts/GothamBold.ttf) format('truetype');
+  }
+
+  font-family: 'GothamBold Font';
+  font-size: 32px;
+  margin-top: -16px;
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 44px;
+  }
 `
 
 // bg

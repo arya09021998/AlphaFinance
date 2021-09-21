@@ -3,6 +3,8 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
+import { Text } from 'penguinfinance-uikit2'
+import useI18n from 'hooks/useI18n'
 import { SECONDS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -17,7 +19,10 @@ import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import PoolCard from './components/PoolCard'
 
+
+
 const Farm: React.FC = () => {
+  const TranslateString = useI18n()
   const { path } = useRouteMatch()
   const { account } = useWeb3React()
   const farms = useFarms()
@@ -66,10 +71,14 @@ const Farm: React.FC = () => {
     <Page>
       <NestBgContainer />
       <NestBannerContainer>
-        <BannerImage
+        {/* <BannerImage
           src={`${process.env.PUBLIC_URL}/images/pools/nests-${isDark ? 'dark' : 'light'}.gif`}
           alt="nests banner"
-        />
+        /> */}
+        <Hero>
+          <Header>{TranslateString(57600, "Wolf's Den")}</Header>
+          <Text>{TranslateString(580, 'Stake $WOLF and get $αWOLF in return')}</Text>
+        </Hero>
       </NestBannerContainer>
       <FlexLayout>
         <Route exact path={`${path}`}>
@@ -101,6 +110,54 @@ const NestBgContainer = styled.div`
   right: 0px;
   left: 0px;
   z-index: -1;
+`
+
+const Hero = styled.div`
+  position: relative;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  text-align: center;
+  height: 165px;
+  background: ${({ theme }) => theme.colors[theme.isDark ? 'darkCard' : 'lightCard']};
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.8);
+  border-radius: 32px;
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 44px;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  > div {
+    color: ${({ theme }) => (theme.isDark ? 'white' : 'black')};
+    z-index: 1;
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    background-position: center center;
+    height: 120px;
+  }
+`
+
+const Header = styled(Text)`
+  @font-face {
+    font-family: 'GothamBold Font';
+    src: url(${process.env.PUBLIC_URL}/fonts/GothamBold.ttf) format('truetype');
+  }
+
+  font-family: 'GothamBold Font';
+  font-size: 32px;
+  margin-top: -16px;
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 44px;
+  }
 `
 
 const NestBannerContainer = styled.div`

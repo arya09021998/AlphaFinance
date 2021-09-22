@@ -145,7 +145,8 @@ const ActionButtonWrapper = styled.div<{ index: number }>`
   margin-right: 10px;
   button {
     background: ${({ index, theme }) => getMainColor(index, theme)};
-    color: ${({ theme }) => theme.isDark && '#ffffff'};
+    color: ${({ index, theme }) => getMainColor(index+1, theme)};
+    color: ${ ({theme}) => theme.isDark? "" : "white"};
     font-family: 'Kanit';
     font-size: 14px;
     font-weight: 500;
@@ -174,7 +175,7 @@ const CardInfoContainer = styled.div<{ index?: number }>`
   :last-child {
     > div {
       > div:last-child {
-        color: ${({ index }) => (index % 2 === 0 ? '#D84E49' : '#ffffff')};
+        color: ${({ index }) => (index % 2 === 0 ? '#CE022D' : '#ffffff')};
       }
     }
   }
@@ -204,7 +205,7 @@ const CardInfoWrapper = styled.div<{ index?: number }>`
 
 const PGUnlockButton = styled(UnlockButton)<{ index: number }>`
   background: ${({ index, theme }) => getMainColor(index, theme)};
-  color: ${({ theme }) => theme.isDark && '#ffffff'};
+  color: ${({ index, theme }) => getMainColor(index+1, theme)};
 `
 
 const FarmDetails = styled(Flex)`
@@ -599,5 +600,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ index, farm, account }) => {
     </FCard>
   )
 }
+
 
 export default FarmCard

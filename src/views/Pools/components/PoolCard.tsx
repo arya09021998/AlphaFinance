@@ -28,7 +28,6 @@ const StyledHeading = styled(Heading)`
   font-weight: 800;
 `
 
-// background: ${(props) => props.theme.card.background};
 const CardContent = styled.div`
   padding: 24px;
 

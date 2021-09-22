@@ -10,7 +10,7 @@ import Menu from 'components/Menu'
 import ToastListener from 'components/ToastListener'
 import PageLoader from 'components/PageLoader'
 import CurrentBlockWrapper from 'components/CurrentBlockWrapper'
-import Pools from 'views/Pools' 
+import Pools from 'views/Pools'
 import GlobalCheckBullHiccupClaimStatus from 'views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
 
@@ -39,9 +39,9 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-
 const HomeBgContainer = styled.div`
-  background-image: ${({ theme }) => (theme.isDark ? "url('/images/home/bg_dark.png')" : "url('/images/home/bg_light.png')")};
+  background-image: ${({ theme }) =>
+    theme.isDark ? "url('/images/home/bg_dark.png')" : "url('/images/home/bg_light.png')"};
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

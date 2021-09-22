@@ -206,6 +206,7 @@ const CardInfoWrapper = styled.div<{ index?: number }>`
 const PGUnlockButton = styled(UnlockButton)<{ index: number }>`
   background: ${({ index, theme }) => getMainColor(index, theme)};
   color: ${({ index, theme }) => getMainColor(index+1, theme)};
+  color: ${ ({theme}) => theme.isDark? "" : "white"};
 `
 
 const FarmDetails = styled(Flex)`

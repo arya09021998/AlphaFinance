@@ -13,27 +13,32 @@ export const config: MenuEntry[] = [
   },
   {
     label: 'Farms',
-    icon: 'IglooIcon',
+    icon: 'PoolIcon',
+    href: '/farms',
+  },
+  {
+    label: 'Hunting Grounds',
+    icon: 'MoonIcon',
     href: '/farms',
   },
   {
     label: 'Compounder',
-    icon: 'CompounderIcon',
+    icon: 'LaunchpadIcon',
     href: '/compounder',
   },
   {
     label: "Wolf's Den",
-    icon: 'NestIcon',
+    icon: 'MoonIcon',
     href: '/den',
   },
   {
     label: 'Yield Strategies',
-    icon: 'CrownIcon',
+    icon: 'LaunchpadIcon',
     href: '/strategies',
   },
   {
     label: 'NFT Yield',
-    icon: 'BattleIcon',
+    icon: 'LogoIcon',
     href: '/nftyield',
   },
   {

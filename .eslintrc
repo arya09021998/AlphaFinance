@@ -1,7 +1,7 @@
 {
   "settings": {
     "import/resolver": {
-      "yarn": {
+      "node": {
         "paths": ["./src"]
       }
     }

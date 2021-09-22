@@ -23,7 +23,7 @@ export const config: MenuEntry[] = [
   },
   {
     label: 'Compounder',
-    icon: 'SunIcon',
+    icon: 'NftIcon',
     href: '/compounder',
   },
   {

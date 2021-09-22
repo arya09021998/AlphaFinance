@@ -10,7 +10,7 @@ import Menu from 'components/Menu'
 import ToastListener from 'components/ToastListener'
 import PageLoader from 'components/PageLoader'
 import CurrentBlockWrapper from 'components/CurrentBlockWrapper'
-import Pools from 'views/Pools'
+import Pools from 'views/Pools' 
 import GlobalCheckBullHiccupClaimStatus from 'views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
 
@@ -21,7 +21,6 @@ const Farms = lazy(() => import('./views/Farms'))
 const Arena = lazy(() => import('./views/Arena'))
 const Launchpad = lazy(() => import('./views/Launchpad'))
 const Emperor = lazy(() => import('./views/Emperor'))
-const CovidEmperor = lazy(() => import('./views/CovidEmperor'))
 const Club = lazy(() => import('./views/Club'))
 const NotFound = lazy(() => import('./views/NotFound'))
 

@@ -18,12 +18,12 @@ export const config: MenuEntry[] = [
   },
   {
     label: 'Hunting Grounds',
-    icon: 'MoonIcon',
+    icon: 'IfoIcon',
     href: '/farms',
   },
   {
     label: 'Compounder',
-    icon: 'LaunchpadIcon',
+    icon: 'SunIcon',
     href: '/compounder',
   },
   {
@@ -33,7 +33,7 @@ export const config: MenuEntry[] = [
   },
   {
     label: 'Yield Strategies',
-    icon: 'LaunchpadIcon',
+    icon: 'GroupsIcon',
     href: '/strategies',
   },
   {

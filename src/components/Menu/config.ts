@@ -19,7 +19,7 @@ export const config: MenuEntry[] = [
   {
     label: 'Hunting Grounds',
     icon: 'IfoIcon',
-    href: '/farms',
+    href: '/Grounds',
   },
   {
     label: 'Compounder',
@@ -38,7 +38,7 @@ export const config: MenuEntry[] = [
   },
   {
     label: 'NFT Yield',
-    icon: 'LogoIcon',
+    icon: 'AuditIcon',
     href: '/nftyield',
   },
   {
@@ -71,15 +71,15 @@ export const config: MenuEntry[] = [
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Github',
+        label: 'Docs',
         href: 'https://github.com/Penguin-Finance',
       },
       {
-        label: 'Docs',
+        label: 'Contracts',
         href: 'https://www.penguinfinance.io/b',
       },
       {
-        label: 'Medium Articles',
+        label: '$WOLF Chart',
         href: 'https://penguin-finance.medium.com/',
       },
     ],

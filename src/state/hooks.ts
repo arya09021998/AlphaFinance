@@ -168,14 +168,14 @@ export const usePriceAvaxUsdt = (): BigNumber => {
 }
 
 export const usePricePefiUsdt = (): BigNumber => {
-  const lpSymbol = 'PEFI-AVAX LP' // PEFI-AVAX LP
+  const lpSymbol = 'WOLF-AVAX LP' // PEFI-AVAX LP
   const farm = useFarmFromSymbol(lpSymbol)
   const avaxPriceUSD = usePriceAvaxUsdt()
   return farm.tokenPriceVsQuote ? avaxPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceEthUsdt = (): BigNumber => {
-  const lpSymbol = 'ETH-AVAX LP' // ETH-AVAX LP
+  const lpSymbol = 'WOLF-MIM LP' // ETH-AVAX LP
   const farm = useFarmFromSymbol(lpSymbol)
   const avaxPriceUSD = usePriceAvaxUsdt()
   return farm.tokenPriceVsQuote ? avaxPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
@@ -188,14 +188,14 @@ export const usePriceEthAvax = (): BigNumber => {
 }
 
 export const usePricePngUsdt = (): BigNumber => {
-  const lpSymbol = 'PEFI-PNG LP'
+  const lpSymbol = 'AVAX'
   const farm = useFarmFromSymbol(lpSymbol)
   const pefiPriceUSD = usePricePefiUsdt()
   return farm.tokenPriceVsQuote ? pefiPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceLinkUsdt = (): BigNumber => {
-  const lpSymbol = 'PEFI-LINK LP'
+  const lpSymbol = 'JOE'
   const farm = useFarmFromSymbol(lpSymbol)
   const pefiPriceUSD = usePricePefiUsdt()
   return farm.tokenPriceVsQuote ? pefiPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
@@ -215,7 +215,7 @@ export const usePriceLydUsdt = (): BigNumber => {
 // }
 
 export const usePriceGdlUsdt = (): BigNumber => {
-  const lpSymbol = 'GDL-AVAX LP'
+  const lpSymbol = 'LYD-USDT LP'
   const farm = useLPFromSymbol(lpSymbol)
   const avaxPriceUSD = usePriceAvaxUsdt()
   return farm.tokenPriceVsQuote ? avaxPriceUSD.div(farm.tokenPriceVsQuote) : ZERO
